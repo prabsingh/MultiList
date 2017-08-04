@@ -42,7 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Multilist.cs" />
+    <Compile Include="MultilistBuilder.cs" />
     <Compile Include="Node.cs" />
     <Compile Include="NodeFactory.cs" />
     <Compile Include="Program.cs" />

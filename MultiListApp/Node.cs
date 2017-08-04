@@ -6,21 +6,21 @@ using System.Threading.Tasks;
 
 namespace MultiListApp
 {
-    class Node
+    public class Node
     {
         private int studentNum;
         private int classNum;
+        private int grade;
         private Node nextStudent;
         private Node nextClass;
-        private int grade;
 
-        public Node(int pStudentNum, int pClassNum,Node pNextStudent, Node pNextClass, int pGrade)
+        public Node(int pStudentNum, int pClassNum, int pGrade, Node pNextStudent, Node pNextClass)
         {
-            studentNum = pStudentNum;
-            classNum = pClassNum;
-            nextStudent = pNextStudent;
-            nextClass = pNextClass;
-            grade = pGrade;
+            StudentNum = pStudentNum;
+            ClassNum = pClassNum;
+            Grade = pGrade;
+            NextStudent = pNextStudent;
+            NextClass = pNextClass;
         }
 
         public int StudentNum
@@ -29,6 +29,10 @@ namespace MultiListApp
             {
                 return studentNum;
             }
+            set
+            {
+                studentNum = value;
+            }
         }
 
         public int ClassNum
@@ -36,6 +40,22 @@ namespace MultiListApp
             get
             {
                 return classNum;
+            }
+            set
+            {
+                classNum = value;
+            }
+        }
+
+        public int Grade
+        {
+            get
+            {
+                return grade;
+            }
+            set
+            {
+                grade = value;
             }
         }
 
@@ -60,18 +80,6 @@ namespace MultiListApp
             set
             {
                 nextClass = value;
-            }
-        }
-
-        public int Grade
-        {
-            get
-            {
-                return grade;
-            }
-            set
-            {
-                grade = value;
             }
         }
 
